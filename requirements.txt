@@ -1,0 +1,8 @@
+pandas
+numpy 
+matplotlib
+seaborn 
+click
+typing_extensions
+zenml
+streamlit
