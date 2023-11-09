@@ -12,7 +12,7 @@ def main():
     st.markdown(
         """ 
     #### Problem Statement 
-     The objective here is to predict customer lifetime value for the future customers."""
+     The objective here is to predict how much net profit a company can expect from his customers."""
     )
 
     # st.markdown(
@@ -61,7 +61,7 @@ def main():
     vehicle_class = st.selectbox("Vehicle Class", ['Two-Door Car', 'Four-Door Car', 'SUV', 'Luxury SUV', 'Sports Car','Luxury Car'])
     vehicle_size = st.selectbox("Vehicle Size", ['Large', 'Medsize', 'Small'])
     coverage = st.selectbox("Coverage", ['Basic', 'Extended', 'Premium'])
-    education = st.selectbox("Education", ['Bachelor', 'College', 'Master', 'High School or Below', 'Doctor'])
+    education = st.selectbox("Education", ['Bachelor', 'Master', 'High School or Below', 'Doctor'])
     response = st.selectbox("Response", ['Yes', 'No'])
     employment_status = st.selectbox("Employment Status", ['Employed', 'Unemployed'])
     gender = st.selectbox("Gender", ['Male', 'Female'])
@@ -97,7 +97,7 @@ def main():
         education = 3
     elif education == 'Master':
         education = 2
-    elif education == 'Bachelor' or education == 'College':
+    elif education == 'Bachelor':
         education = 1
     elif education == 'High School or Below':
         education = 0
@@ -109,6 +109,7 @@ def main():
              running = False
          )
          service.start()
+         
          if service is None:
              st.write(
                  'No service could be found.'
